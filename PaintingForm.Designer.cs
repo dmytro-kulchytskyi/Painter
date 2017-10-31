@@ -260,7 +260,7 @@
             this.Controls.Add(this.pictureBox);
             this.MinimumSize = new System.Drawing.Size(200, 450);
             this.Name = "PaintingForm";
-            this.Text = "Form1";
+            this.Text = "Painter";
             this.Load += new System.EventHandler(this.PaintingFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorPreview)).EndInit();
