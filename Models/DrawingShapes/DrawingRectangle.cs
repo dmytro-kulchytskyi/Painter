@@ -23,7 +23,9 @@ namespace PainterApp.Models.DrawingShapes
 
         public void Draw(Graphics graphics)
         {
-            graphics.DrawRectangle(new Pen(Color.GetColor(), LineWidth), Start.X, Start.Y, Width, Heigth);
+            var width = Width == 0 ? 1 : Width;
+            var heigth = Heigth == 0 ? 1 : Heigth;
+            graphics.DrawRectangle(new Pen(Color.GetColor(), LineWidth), Start.X, Start.Y, width, heigth);
         }
 
         public void Scale(Point endPoint)

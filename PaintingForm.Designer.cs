@@ -235,13 +235,13 @@
             this.panel1.Controls.Add(this.EllipseButton);
             this.panel1.Location = new System.Drawing.Point(6, 367);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(72, 115);
+            this.panel1.Size = new System.Drawing.Size(67, 115);
             this.panel1.TabIndex = 19;
             // 
             // CancelButton
             // 
             this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CancelButton.Location = new System.Drawing.Point(6, 296);
+            this.CancelButton.Location = new System.Drawing.Point(6, 301);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(66, 23);
             this.CancelButton.TabIndex = 20;
