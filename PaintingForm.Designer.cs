@@ -48,6 +48,7 @@
             this.ColorPreview = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorPreview)).BeginInit();
             this.panel1.SuspendLayout();
@@ -237,11 +238,23 @@
             this.panel1.Size = new System.Drawing.Size(72, 115);
             this.panel1.TabIndex = 19;
             // 
+            // CancelButton
+            // 
+            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.CancelButton.Location = new System.Drawing.Point(6, 296);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(66, 23);
+            this.CancelButton.TabIndex = 20;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
             // PaintingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 484);
+            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ColorPreview);
@@ -258,7 +271,7 @@
             this.Controls.Add(this.RTextBox);
             this.Controls.Add(this.ATextBox);
             this.Controls.Add(this.pictureBox);
-            this.MinimumSize = new System.Drawing.Size(200, 450);
+            this.MinimumSize = new System.Drawing.Size(200, 500);
             this.Name = "PaintingForm";
             this.Text = "Painter";
             this.Load += new System.EventHandler(this.PaintingFormLoad);
@@ -292,6 +305,7 @@
         private System.Windows.Forms.PictureBox ColorPreview;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button CancelButton;
     }
 }
 

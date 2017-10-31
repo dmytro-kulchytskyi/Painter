@@ -118,5 +118,15 @@ namespace PainterApp
             DrawAll(e.Graphics);
             shape?.Draw(e.Graphics);
         }
+
+        public void CancelLastChange()
+        {
+            var cnt = Shapes.Count;
+            if (cnt > 0)
+            {
+                Shapes.RemoveAt(cnt - 1);
+                PictureBox.Invalidate();
+            }
+        }
     }
 }

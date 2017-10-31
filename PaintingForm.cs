@@ -105,6 +105,11 @@ namespace PainterApp
         {
             Painter.ShapeType = ShapeType.Ellipse;
         }
-        #endregion  
+        #endregion
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Painter.CancelLastChange();
+        }
     }
 }
