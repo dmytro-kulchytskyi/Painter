@@ -19,7 +19,6 @@ namespace PainterApp.Models
             R = r;
             G = g;
             B = b;
-            if (!IsValid) throw new ArgumentOutOfRangeException("Bad values");
         }
 
         public Color GetColor()

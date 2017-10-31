@@ -37,7 +37,7 @@ namespace PainterApp
 
         private void PaintingFormLoad(object sender, EventArgs e)
         {
-            Painter = new WinFormsPictureBoxPainter(pictureBox, ShapeType.Rectangle, startColor, startLineWidth);
+            Painter = new WinFormsPictureBoxPainter(pictureBox, startShapeType, startColor, startLineWidth);
 
             PreviewColor(Painter.Color);
 

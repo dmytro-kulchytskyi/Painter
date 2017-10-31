@@ -21,6 +21,7 @@ namespace PainterApp.Models.Shapes
 
         public override void ChangeCordinates(Point start, Point end)
         {
+            base.ChangeCordinates(Start, end);
             Points.Add(end);
         }
     }

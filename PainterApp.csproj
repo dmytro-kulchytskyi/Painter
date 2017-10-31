@@ -57,7 +57,7 @@
     <Compile Include="Models\DrawingShapes\DrawingRectangle.cs" />
     <Compile Include="Models\DrawingShapes\IDrawingShape.cs" />
     <Compile Include="Models\MyColor.cs" />
-    <Compile Include="Models\Shapes\ShapeType.cs" />
+    <Compile Include="Models\ShapeType.cs" />
     <Compile Include="WinFormsPictureBoxPainter.cs" />
     <Compile Include="Models\Shapes\ShapeBase.cs" />
     <Compile Include="Models\Shapes\MyEllipse.cs" />
