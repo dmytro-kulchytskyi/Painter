@@ -1,0 +1,9 @@
+C:\Users\deyne\Desktop\Painter\bin\Debug\Painter.exe.config
+C:\Users\deyne\Desktop\Painter\bin\Debug\Painter.exe
+C:\Users\deyne\Desktop\Painter\bin\Debug\Painter.pdb
+C:\Users\deyne\Desktop\Painter\obj\Debug\PainterApp.csprojResolveAssemblyReference.cache
+C:\Users\deyne\Desktop\Painter\obj\Debug\PainterApp.PaintingForm.resources
+C:\Users\deyne\Desktop\Painter\obj\Debug\Painter.Properties.Resources.resources
+C:\Users\deyne\Desktop\Painter\obj\Debug\PainterApp.csproj.GenerateResource.Cache
+C:\Users\deyne\Desktop\Painter\obj\Debug\Painter.exe
+C:\Users\deyne\Desktop\Painter\obj\Debug\Painter.pdb
