@@ -15,7 +15,7 @@ namespace PainterApp.Models.DrawingShapes
 
         private Point enterPoint;
 
-        public DrawingRectangle(Point start, Point end, MyColor color, int lineWidth) 
+        public DrawingRectangle(Point start, Point end, MyColor color, int lineWidth)
             : base(start, end, color, lineWidth)
         {
             enterPoint = start;

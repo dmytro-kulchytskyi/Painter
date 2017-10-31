@@ -62,11 +62,11 @@ namespace PainterApp
             }
         }
 
-        private List<IDrawingShape> Shapes = new List<IDrawingShape>();
+        private List<IDrawingShape> shapes = new List<IDrawingShape>();
 
         private void DrawAll(Graphics graphics)
         {
-            foreach (var shape in Shapes)
+            foreach (var shape in shapes)
                 shape.Draw(graphics);
         }
 
@@ -108,7 +108,7 @@ namespace PainterApp
         {
             if (shape != null)
             {
-                Shapes.Add(shape);
+                shapes.Add(shape);
                 shape = null;
             }
         }
@@ -121,10 +121,10 @@ namespace PainterApp
 
         public void CancelLastChange()
         {
-            var cnt = Shapes.Count;
+            var cnt = shapes.Count;
             if (cnt > 0)
             {
-                Shapes.RemoveAt(cnt - 1);
+                shapes.RemoveAt(cnt - 1);
                 PictureBox.Invalidate();
             }
         }
