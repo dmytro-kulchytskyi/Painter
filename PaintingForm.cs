@@ -75,6 +75,7 @@ namespace PainterApp
         }
         #endregion
 
+        #region LineWidthSelection
         private void SetLineWidthButton_Click(object sender, EventArgs e)
         {
             if (int.TryParse(LineWidthTextBox.Text, out int lineWidth) && lineWidth > 0)
@@ -82,6 +83,7 @@ namespace PainterApp
             else
                 MessageBox.Show("You must enter a positive number");
         }
+        #endregion
 
         #region ShapeTypeSelection
         private void CustomShapeButton_Click(object sender, EventArgs e)

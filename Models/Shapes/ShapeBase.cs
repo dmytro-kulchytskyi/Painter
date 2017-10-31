@@ -34,7 +34,7 @@ namespace PainterApp.Models.Shapes
             End = end;
         }
 
-        public void OrderCordinates()
+        protected void OrderCordinates()
         {
             int leftX, topY, rightX, bottomY;
 
