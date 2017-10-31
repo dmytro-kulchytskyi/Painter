@@ -47,8 +47,10 @@
             this.CustomShapeButton = new System.Windows.Forms.Button();
             this.ColorPreview = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorPreview)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox
@@ -60,7 +62,7 @@
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox.Location = new System.Drawing.Point(79, 5);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(611, 467);
+            this.pictureBox.Size = new System.Drawing.Size(620, 476);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
@@ -166,7 +168,7 @@
             // 
             // EllipseButton
             // 
-            this.EllipseButton.Location = new System.Drawing.Point(6, 448);
+            this.EllipseButton.Location = new System.Drawing.Point(-1, 90);
             this.EllipseButton.Name = "EllipseButton";
             this.EllipseButton.Size = new System.Drawing.Size(67, 23);
             this.EllipseButton.TabIndex = 13;
@@ -176,7 +178,7 @@
             // 
             // RectangleButton
             // 
-            this.RectangleButton.Location = new System.Drawing.Point(6, 419);
+            this.RectangleButton.Location = new System.Drawing.Point(-1, 61);
             this.RectangleButton.Name = "RectangleButton";
             this.RectangleButton.Size = new System.Drawing.Size(67, 23);
             this.RectangleButton.TabIndex = 14;
@@ -186,7 +188,7 @@
             // 
             // LineButton
             // 
-            this.LineButton.Location = new System.Drawing.Point(7, 390);
+            this.LineButton.Location = new System.Drawing.Point(0, 32);
             this.LineButton.Name = "LineButton";
             this.LineButton.Size = new System.Drawing.Size(66, 23);
             this.LineButton.TabIndex = 15;
@@ -196,7 +198,7 @@
             // 
             // CustomShapeButton
             // 
-            this.CustomShapeButton.Location = new System.Drawing.Point(7, 361);
+            this.CustomShapeButton.Location = new System.Drawing.Point(0, 3);
             this.CustomShapeButton.Name = "CustomShapeButton";
             this.CustomShapeButton.Size = new System.Drawing.Size(66, 23);
             this.CustomShapeButton.TabIndex = 16;
@@ -223,17 +225,26 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Color:";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.CustomShapeButton);
+            this.panel1.Controls.Add(this.LineButton);
+            this.panel1.Controls.Add(this.RectangleButton);
+            this.panel1.Controls.Add(this.EllipseButton);
+            this.panel1.Location = new System.Drawing.Point(6, 367);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(72, 115);
+            this.panel1.TabIndex = 19;
+            // 
             // PaintingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 484);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ColorPreview);
-            this.Controls.Add(this.CustomShapeButton);
-            this.Controls.Add(this.LineButton);
-            this.Controls.Add(this.RectangleButton);
-            this.Controls.Add(this.EllipseButton);
             this.Controls.Add(this.SetLineWidthButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.LineWidthTextBox);
@@ -247,12 +258,13 @@
             this.Controls.Add(this.RTextBox);
             this.Controls.Add(this.ATextBox);
             this.Controls.Add(this.pictureBox);
-            this.MinimumSize = new System.Drawing.Size(718, 523);
+            this.MinimumSize = new System.Drawing.Size(200, 450);
             this.Name = "PaintingForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.PaintingFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorPreview)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +291,7 @@
         private System.Windows.Forms.Button CustomShapeButton;
         private System.Windows.Forms.PictureBox ColorPreview;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
