@@ -14,7 +14,7 @@ namespace PainterApp.Models.DrawingShapes
     {
         private Point enterPoint;
 
-        public DrawingEllipse(Point start, Point end, MyColor color, int lineWidth) 
+        public DrawingEllipse(Point start, Point end, MyColor color, int lineWidth)
             : base(start, end, color, lineWidth)
         {
             enterPoint = start;
@@ -22,7 +22,9 @@ namespace PainterApp.Models.DrawingShapes
 
         public void Draw(Graphics graphics)
         {
-            graphics.DrawEllipse(new Pen(Color.GetColor(), LineWidth), Start.X, Start.Y, Width, Heigth);
+            var width = Width == 0 ? 1 : Width;
+            var heigth = Heigth == 0 ? 1 : Heigth;
+            graphics.DrawEllipse(new Pen(Color.GetColor(), LineWidth), Start.X, Start.Y, width, heigth);
         }
 
         public void Scale(Point endPoint)
