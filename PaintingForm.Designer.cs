@@ -49,9 +49,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.ForwardButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorPreview)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox
@@ -63,7 +67,7 @@
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox.Location = new System.Drawing.Point(79, 5);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(620, 476);
+            this.pictureBox.Size = new System.Drawing.Size(702, 553);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             // 
@@ -133,13 +137,13 @@
             // 
             // SetColorButton
             // 
-            this.SetColorButton.Location = new System.Drawing.Point(6, 155);
+            this.SetColorButton.Location = new System.Drawing.Point(5, 155);
             this.SetColorButton.Name = "SetColorButton";
-            this.SetColorButton.Size = new System.Drawing.Size(67, 23);
+            this.SetColorButton.Size = new System.Drawing.Size(68, 23);
             this.SetColorButton.TabIndex = 9;
             this.SetColorButton.Text = "Apply";
             this.SetColorButton.UseVisualStyleBackColor = true;
-            this.SetColorButton.Click += new System.EventHandler(this.SetColorButton_Click);
+            this.SetColorButton.Click += new System.EventHandler(this.SetColorButtonClick);
             // 
             // LineWidthTextBox
             // 
@@ -159,13 +163,13 @@
             // 
             // SetLineWidthButton
             // 
-            this.SetLineWidthButton.Location = new System.Drawing.Point(6, 238);
+            this.SetLineWidthButton.Location = new System.Drawing.Point(5, 238);
             this.SetLineWidthButton.Name = "SetLineWidthButton";
-            this.SetLineWidthButton.Size = new System.Drawing.Size(67, 23);
+            this.SetLineWidthButton.Size = new System.Drawing.Size(68, 23);
             this.SetLineWidthButton.TabIndex = 12;
             this.SetLineWidthButton.Text = "Apply";
             this.SetLineWidthButton.UseVisualStyleBackColor = true;
-            this.SetLineWidthButton.Click += new System.EventHandler(this.SetLineWidthButton_Click);
+            this.SetLineWidthButton.Click += new System.EventHandler(this.SetLineWidthButtonClick);
             // 
             // EllipseButton
             // 
@@ -175,7 +179,7 @@
             this.EllipseButton.TabIndex = 13;
             this.EllipseButton.Text = "Ellipse";
             this.EllipseButton.UseVisualStyleBackColor = true;
-            this.EllipseButton.Click += new System.EventHandler(this.EllipseButton_Click);
+            this.EllipseButton.Click += new System.EventHandler(this.EllipseButtonClick);
             // 
             // RectangleButton
             // 
@@ -185,27 +189,27 @@
             this.RectangleButton.TabIndex = 14;
             this.RectangleButton.Text = "Rectangle";
             this.RectangleButton.UseVisualStyleBackColor = true;
-            this.RectangleButton.Click += new System.EventHandler(this.RectangleButton_Click);
+            this.RectangleButton.Click += new System.EventHandler(this.RectangleButtonClick);
             // 
             // LineButton
             // 
-            this.LineButton.Location = new System.Drawing.Point(0, 32);
+            this.LineButton.Location = new System.Drawing.Point(-1, 32);
             this.LineButton.Name = "LineButton";
-            this.LineButton.Size = new System.Drawing.Size(66, 23);
+            this.LineButton.Size = new System.Drawing.Size(67, 23);
             this.LineButton.TabIndex = 15;
             this.LineButton.Text = "Line";
             this.LineButton.UseVisualStyleBackColor = true;
-            this.LineButton.Click += new System.EventHandler(this.LineButton_Click);
+            this.LineButton.Click += new System.EventHandler(this.LineButtonClick);
             // 
             // CustomShapeButton
             // 
-            this.CustomShapeButton.Location = new System.Drawing.Point(0, 3);
+            this.CustomShapeButton.Location = new System.Drawing.Point(-1, 3);
             this.CustomShapeButton.Name = "CustomShapeButton";
-            this.CustomShapeButton.Size = new System.Drawing.Size(66, 23);
+            this.CustomShapeButton.Size = new System.Drawing.Size(67, 23);
             this.CustomShapeButton.TabIndex = 16;
             this.CustomShapeButton.Text = "Pencil";
             this.CustomShapeButton.UseVisualStyleBackColor = true;
-            this.CustomShapeButton.Click += new System.EventHandler(this.CustomShapeButton_Click);
+            this.CustomShapeButton.Click += new System.EventHandler(this.CustomShapeButtonClick);
             // 
             // ColorPreview
             // 
@@ -233,28 +237,58 @@
             this.panel1.Controls.Add(this.LineButton);
             this.panel1.Controls.Add(this.RectangleButton);
             this.panel1.Controls.Add(this.EllipseButton);
-            this.panel1.Location = new System.Drawing.Point(6, 367);
+            this.panel1.Location = new System.Drawing.Point(6, 444);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(67, 115);
             this.panel1.TabIndex = 19;
             // 
             // CancelButton
             // 
-            this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.CancelButton.Location = new System.Drawing.Point(6, 301);
+            this.CancelButton.Location = new System.Drawing.Point(-1, 3);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(66, 23);
+            this.CancelButton.Size = new System.Drawing.Size(68, 23);
             this.CancelButton.TabIndex = 20;
-            this.CancelButton.Text = "Step back";
+            this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this.CancelButtonClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel2.Controls.Add(this.ClearButton);
+            this.panel2.Controls.Add(this.ForwardButton);
+            this.panel2.Controls.Add(this.CancelButton);
+            this.panel2.Location = new System.Drawing.Point(6, 305);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(67, 88);
+            this.panel2.TabIndex = 21;
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.Location = new System.Drawing.Point(-1, 61);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(66, 23);
+            this.ClearButton.TabIndex = 22;
+            this.ClearButton.Text = "Cancel all";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButtonClick);
+            // 
+            // ForwardButton
+            // 
+            this.ForwardButton.Location = new System.Drawing.Point(-1, 32);
+            this.ForwardButton.Name = "ForwardButton";
+            this.ForwardButton.Size = new System.Drawing.Size(68, 23);
+            this.ForwardButton.TabIndex = 21;
+            this.ForwardButton.Text = "Return";
+            this.ForwardButton.UseVisualStyleBackColor = true;
+            this.ForwardButton.Click += new System.EventHandler(this.ForwardButtonClick);
             // 
             // PaintingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 484);
-            this.Controls.Add(this.CancelButton);
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ColorPreview);
@@ -271,13 +305,14 @@
             this.Controls.Add(this.RTextBox);
             this.Controls.Add(this.ATextBox);
             this.Controls.Add(this.pictureBox);
-            this.MinimumSize = new System.Drawing.Size(200, 500);
+            this.MinimumSize = new System.Drawing.Size(200, 525);
             this.Name = "PaintingForm";
             this.Text = "Painter";
             this.Load += new System.EventHandler(this.PaintingFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorPreview)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,6 +341,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button ForwardButton;
     }
 }
 

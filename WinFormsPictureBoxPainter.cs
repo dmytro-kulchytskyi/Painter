@@ -63,6 +63,7 @@ namespace PainterApp
         }
 
         private List<IDrawingShape> shapes = new List<IDrawingShape>();
+        private List<IDrawingShape> cancaledShapes = new List<IDrawingShape>();
 
         private void DrawAll(Graphics graphics)
         {
@@ -119,14 +120,42 @@ namespace PainterApp
             shape?.Draw(e.Graphics);
         }
 
-        public void CancelLastChange()
+        public void StepBack()
         {
-            var cnt = shapes.Count;
-            if (cnt > 0)
+            if (shapes.Count > 0)
             {
-                shapes.RemoveAt(cnt - 1);
+                var shape = shapes.Last();
+                shapes.RemoveAt(shapes.Count - 1);
+
+                cancaledShapes.Add(shape);
                 PictureBox.Invalidate();
             }
+        }
+
+        public void StepForward()
+        {
+            if (cancaledShapes.Count > 0)
+            {
+                var shape = cancaledShapes.Last();
+                cancaledShapes.RemoveAt(cancaledShapes.Count - 1);
+
+                shapes.Add(shape);
+                PictureBox.Invalidate();
+            }
+        }
+
+        public void Clear(bool saveHistory)
+        {
+            if (saveHistory)
+            {
+                shapes.Reverse();
+                cancaledShapes.AddRange(shapes);
+            }
+            else
+                cancaledShapes.Clear();
+
+            shapes.Clear();
+            PictureBox.Invalidate();
         }
     }
 }

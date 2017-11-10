@@ -56,7 +56,7 @@ namespace PainterApp
                 ColorPreview.BackColor = color.GetColor();
         }
 
-        private void SetColorButton_Click(object sender, EventArgs e)
+        private void SetColorButtonClick(object sender, EventArgs e)
         {
             if (int.TryParse(ATextBox.Text, out int a))
                 if (int.TryParse(RTextBox.Text, out int r))
@@ -76,7 +76,7 @@ namespace PainterApp
         #endregion
 
         #region LineWidthSelection
-        private void SetLineWidthButton_Click(object sender, EventArgs e)
+        private void SetLineWidthButtonClick(object sender, EventArgs e)
         {
             if (int.TryParse(LineWidthTextBox.Text, out int lineWidth) && lineWidth > 0)
                 Painter.LineWidth = lineWidth;
@@ -86,30 +86,40 @@ namespace PainterApp
         #endregion
 
         #region ShapeTypeSelection
-        private void CustomShapeButton_Click(object sender, EventArgs e)
+        private void CustomShapeButtonClick(object sender, EventArgs e)
         {
             Painter.ShapeType = ShapeType.Custom;
         }
 
-        private void LineButton_Click(object sender, EventArgs e)
+        private void LineButtonClick(object sender, EventArgs e)
         {
             Painter.ShapeType = ShapeType.Line;
         }
 
-        private void RectangleButton_Click(object sender, EventArgs e)
+        private void RectangleButtonClick(object sender, EventArgs e)
         {
             Painter.ShapeType = ShapeType.Rectangle;
         }
 
-        private void EllipseButton_Click(object sender, EventArgs e)
+        private void EllipseButtonClick(object sender, EventArgs e)
         {
             Painter.ShapeType = ShapeType.Ellipse;
         }
         #endregion
 
-        private void CancelButton_Click(object sender, EventArgs e)
+        private void CancelButtonClick(object sender, EventArgs e)
         {
-            Painter.CancelLastChange();
+            Painter.StepBack();
+        }
+
+        private void ForwardButtonClick(object sender, EventArgs e)
+        {
+            Painter.StepForward();
+        }
+
+        private void ClearButtonClick(object sender, EventArgs e)
+        {
+            Painter.Clear(true);
         }
     }
 }
