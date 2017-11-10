@@ -54,7 +54,7 @@ namespace PainterApp
         {
             get => lineWidth;
             set
-            {  
+            {
                 if (value < 1)
                     throw new ArgumentOutOfRangeException("Value must be positive");
 
@@ -115,7 +115,7 @@ namespace PainterApp
         }
 
         private void Refresh(object sender, PaintEventArgs e)
-        { 
+        {
             DrawAll(e.Graphics);
             shape?.Draw(e.Graphics);
         }
@@ -147,10 +147,7 @@ namespace PainterApp
         public void Clear(bool saveHistory)
         {
             if (saveHistory)
-            {
-                shapes.Reverse();
                 cancaledShapes.AddRange(shapes);
-            }
             else
                 cancaledShapes.Clear();
 

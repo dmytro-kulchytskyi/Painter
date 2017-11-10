@@ -28,7 +28,8 @@ namespace PainterApp
             startShapeType = ShapeType.Custom;
         }
 
-        public PaintingForm(MyColor startColor, int startLineWidth, ShapeType startShapeType) : this()
+        public PaintingForm(MyColor startColor, int startLineWidth, ShapeType startShapeType) 
+            : this()
         {
             this.startColor = startColor;
             this.startLineWidth = startLineWidth;
@@ -119,7 +120,7 @@ namespace PainterApp
 
         private void ClearButtonClick(object sender, EventArgs e)
         {
-            Painter.Clear(true);
+            Painter.Clear(saveHistory: true);
         }
     }
 }
